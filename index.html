@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alurageek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> 
+        <img class="header__coracoes" src="Coracoes.png" alt="Imagem de 3 corações juntos">
+        <h1 class="header__titulo">Alura Geek</h1> 
+    </header>
+    <main>
+        <section class="produtos">
+            <h2 class="produtos__titulo">Produtos</h2>
+            <ul class="produtos__lista" data-lista-produtos>
+                <li>
+                    <img class="produto__imagem" src="caneca harry potter_mapa maroto.png" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Caneca mapa do maroto Harry Potter</h3>
+                        <p class="produto__valor">R$ 60,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="chapeu seletor harry potter.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Chapéu seletor das casas Harry Potter</h3>
+                        <p class="produto__valor">R$ 120,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="kit almofadas harry potter.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Kit almofadas das casas do Harry Potter</h3>
+                        <p class="produto__valor">R$ 200,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="luminaria edwiges harry potter.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Luminária coruja Edwiges Harry Potter</h3>
+                        <p class="produto__valor">R$ 400,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="manta mapa maroto harry potter.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Manta mapa do maroto Harry Potter</h3>
+                        <p class="produto__valor">R$ 250,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img  class="produto__imagem" src="BB8 star wars eletronico.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Boneco BB8 eletrônico Star Wars</h3>
+                        <p class="produto__valor">R$ 900,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="pantufa yoda bebe star wars.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Pantufa Yoda baby Star Wars</h3>
+                        <p class="produto__valor">R$ 250,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="kit bonecos star wars.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Kit miniaturas do Star Wars</h3>
+                        <p class="produto__valor">R$ 250,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+                <li>
+                    <img class="produto__imagem" src="mochila star wars.jpg" alt="Imagem do produto">
+                    <div class="produto__descricao">
+                        <h3 class="produto__nome">Mochila vintage do Star Wars</h3>
+                        <p class="produto__valor">R$ 600,00</p>
+                        <img class="lixeira" src="icone lixeira.png" 
+                        alt="Remover produto" onclick="removerProduto(this)">
+                    </div>
+                </li>
+            </ul>
+        </section>        
+        
+        <section class="addproduto">
+            <h2 class="addproduto__titulo">Adicionar Produto</h2>
+            <form id="form-produto">
+                <label for="nome-produto" class="addproduto__camponome">Nome</label>
+                <input type="text" id="nome-produto" class="addproduto__input" required>
+                <label for="valor-produto" class="addproduto__campovalor">Valor</label>
+                <input type="text" id="valor-produto" class="addproduto__input" required>
+        
+                <h3 class="addimg__titulo">Adicionar Imagem</h3>
+                <input type="file" id="imagem-produto" class="addimg__upload" accept="image/*" required>
+                
+                <div class="botoes">
+                    <button type="submit" id="adicionar-produto" class="botao__adicionar">Adicionar</button>
+                    <button type="reset" id="limpar-formulario" class="botao__limpar">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="footer__conteudo">
+            <img class="footer__conteudo__coracoes" src="Coracoes.png" alt="Imagem de 3 corações juntos">
+            <h1 class="footer__conteudo__titulo">Alura Geek</h1> 
+        </section>
+        <p class="footer__desenvolvido">Desenvolvido por Renata Celebrone</p>
+    </footer>
+
+<!-- Modal para mensagens e confirmações --> 
+
+    <div id="modal" class="modal">
+        <div class="conteudo__modal">
+            <p id="mensagem-modal"></p>
+            <div class="botoes__modal">
+                <button id="confirmar-modal" class="btn__modal">Confirmar</button>
+                <button id="cancelar-modal" class="btn__modal">Cancelar</button>
+            </div>
+            <div class="botao__fechar">
+                <button id="fechar-modal" class="btn__modal">ok</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
